@@ -67,7 +67,7 @@ public abstract class Cuenta {
 
     @Override
     public String toString() {
-        return "Cuenta{" + "cliente=" + cliente + ", tipoCliente=" + tipoCliente + ", balance=" + balance + ", tasaInteres=" + tasaInteres + '}';
+        return "cliente=" + cliente + ", tipoCliente=" + tipoCliente + ", balance=" + balance + ", tasaInteres=" + tasaInteres ;
     }
 
     @Override
