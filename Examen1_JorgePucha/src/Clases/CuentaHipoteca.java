@@ -60,22 +60,26 @@ public class CuentaHipoteca extends Cuenta {
             JOptionPane.showMessageDialog(null, "Fin del Prestamo", "Prestamo", JOptionPane.INFORMATION_MESSAGE);
         } else {
             if (depositos <= 12 && this.getTipoCliente().equalsIgnoreCase("Empresa")) {
+                depositos++;
                 double pagar = this.getBalance() / meses;
-                JOptionPane.showMessageDialog(null, pagar, "Valor a Pagar", JOptionPane.INFORMATION_MESSAGE);
-                depositos++;
+                JOptionPane.showMessageDialog(null, "Valor a Pagar"+pagar,"Deposito Realizado "+getDepositos(), JOptionPane.INFORMATION_MESSAGE);
+                
             } else if (depositos > 12 && this.getTipoCliente().equalsIgnoreCase("Empresa")) {
-                double pagar = this.getBalance() / meses + calcularInteres(meses);
-                JOptionPane.showMessageDialog(null, pagar, "Valor a Pagar", JOptionPane.INFORMATION_MESSAGE);
                 depositos++;
+                double pagar = this.getBalance() / meses + calcularInteres(meses);
+                JOptionPane.showMessageDialog(null, "Valor a Pagar"+pagar, "Deposito Realizado "+getDepositos(), JOptionPane.INFORMATION_MESSAGE);
+                
             }
             if (depositos <= 12 && this.getTipoCliente().equalsIgnoreCase("Natural")) {
+                depositos++;
                 double pagar = this.getBalance() / meses;
-                JOptionPane.showMessageDialog(null, pagar, "Valor a Pagar", JOptionPane.INFORMATION_MESSAGE);
-                depositos++;
+                JOptionPane.showMessageDialog(null,"Valor a Pagar"+pagar, "Deposito Realizado "+getDepositos(), JOptionPane.INFORMATION_MESSAGE);
+                
             } else if (depositos > 12 && this.getTipoCliente().equalsIgnoreCase("Natural")) {
-                double pagar = this.getBalance() / meses + (calcularInteres(meses) / 2);
-                JOptionPane.showMessageDialog(null, pagar, "Valor a Pagar", JOptionPane.INFORMATION_MESSAGE);
                 depositos++;
+                double pagar = this.getBalance() / meses + (calcularInteres(meses) / 2);
+                JOptionPane.showMessageDialog(null, "Valor a Pagar"+pagar, "Deposito Realizado "+getDepositos(), JOptionPane.INFORMATION_MESSAGE);
+                
             }
         }
 
