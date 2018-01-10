@@ -11,6 +11,10 @@ package Clases;
  */
 public class CuentaPrestamo extends Cuenta {
 
+    public CuentaPrestamo(String cliente) {
+        super(cliente);
+    }
+    
     public CuentaPrestamo(String cliente, String tipoCliente, double balance, double tasaInteres) {
         super(cliente, tipoCliente, balance, tasaInteres);
     }
