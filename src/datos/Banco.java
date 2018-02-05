@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Clases;
+package datos;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -12,11 +12,12 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Personal
+ * @author Jorge Pucha
  */
 public class Banco {
 
     static ArrayList<Cuenta> listaCuenta = new ArrayList<Cuenta>();
+    static String archivo = "";
 
     public static void agregar(Cuenta cuenta) {
         listaCuenta.add(cuenta);
@@ -25,7 +26,9 @@ public class Banco {
     public static void grabar() {
         PrintWriter pw = null;
         try {
-            FileWriter fw = new FileWriter("C://Users//Personal//Documents//NetBeansProjects//Examen1_JorgePucha/Banco.csv", true);
+	    // Examen002: La ruta y el nombre del 'archivo' debe ser 
+	    // establecido dinamicamente por el usuario en el lugar adecuado
+            FileWriter fw = new FileWriter(archivo, true);
             pw = new PrintWriter(fw);
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -61,5 +64,14 @@ public class Banco {
             return listaCuenta.get(listaCuenta.indexOf(c));
         }
         return null;
+    }
+
+    public static void leerCuentas(){
+	/* 
+	 * Lee los datos desde un archivo de texto, crea objetos 'Cuenta'
+	 * y los almacena en la lista 'listaCuenta'
+	 */
+	// Examen 002: Completar este metodo
+
     }
 }

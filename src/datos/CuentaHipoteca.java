@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Clases;
+package datos;
 
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Personal
+ * @author Jorge Pucha
  */
 public class CuentaHipoteca extends Cuenta {
 

@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Clases;
+package datos;
 
 import java.util.Objects;
 
 /**
  *
- * @author Personal
+ * @author Jorge Pucha
  */
 public abstract class Cuenta {
     private String cliente;
