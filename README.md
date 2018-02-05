@@ -1,2 +1,1 @@
-# examen-1-paralelo-a-JorgePucha
-examen-1-paralelo-a-JorgePucha created by GitHub Classroom
+# Base para el Examen002-B
